@@ -18,14 +18,15 @@ export default {
             if(!this.canGoBack) return;
             
             if(this.highlighted) this.highlighted = undefined;
-            this.viewStack.pop()
+            this.viewStack.pop();
         },
         goTo(newView) {
             console.log("goto", newView);
-            this.viewStack.push(newView)
+            this.viewStack.push(newView);
         },
         highlight(child) {
             this.highlighted = child;
+            // do stuff on highlight
         },
 
         // event handlers

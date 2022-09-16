@@ -4,5 +4,5 @@ export default {
 }
 </script>
 <template>
-    <h3>{{ data.name }}</h3>
+    <h3>Item {{ data.name }}</h3>
 </template>

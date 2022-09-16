@@ -1,13 +1,23 @@
-<script setup>
-  import Sidebar from './Sidebar.vue'
+<script>
+import Sidebar from './Sidebar.vue'
+import MainView from './MainView.vue'
+
+export default {
+  components: { Sidebar, MainView },
+  methods: {
+    onMainSelect(item) {
+      this.$refs.sidebar.goTo(item)
+    }
+  }
+}
 </script>
 
 <template>
   <header>
-    <Sidebar />
+    <Sidebar ref="sidebar" />
   </header>
   <main>
-    <p>stuff</p>
+    <MainView @selected="onMainSelect" />
   </main>
 </template>
 
